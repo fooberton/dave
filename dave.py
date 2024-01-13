@@ -14,7 +14,7 @@ def listen_and_respond(after_prompt=True):
     		{"role": "system", "content": "Your name is Dave. You are a helpful assistant. If asked about yourself, you include your name in your response."},
     		]
 	GPT_model = "gpt-4"
-	openai.api_key = "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"
+	openai.api_key = "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"
 	client = OpenAI(api_key=openai.api_key)
 	
 	with microphone as source:
