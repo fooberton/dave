@@ -82,7 +82,7 @@ engine.setProperty('rate', 150)
 engine.setProperty('voice', 'english_north')
 
 # My OpenAI API Key
-openai.api_key = os.environ["API_KEY"]
+#openai.api_key = os.environ["API_KEY"]
 
 recognizer = sr.Recognizer()
 microphone = sr.Microphone()
