@@ -1,7 +1,7 @@
 import time
 import speech_recognition as sr
 import os
-import openai
+from openai import OpenAI
 import pyttsx3
 
 # Function to transcribe audio, send to ChatGPT, and read aloud
