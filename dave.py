@@ -6,20 +6,16 @@ import pyttsx3
 
 # Function to transcribe audio, send to ChatGPT, and read aloud
 def listen_and_respond(after_prompt=True):
-	"""
-	Transcribes audio, sends to ChatGPT, and responds in speech
-	
-	Args:
-	after_prompt: bool, whether the response comes directly
-	after the user says "Hey, Jarvis!" or not
-	
-	"""
-	# Default is don't start listening, until I tell you to
 	start_listening = False
+
+	
 	chat_log=[
     		{"role": "system", "content": "Your name is Dave. You are a helpful assistant. If asked about yourself, you include your name in your response."},
     		]
 	GPT_model = "gpt-4"
+	openai.api_key = "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"
+	client = OpenAI(api_key=openai.api_key)
+	
 	with microphone as source:
 
 		if after_prompt:
