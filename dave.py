@@ -15,7 +15,7 @@ def listen_and_respond(after_prompt=True):
     		]
 	GPT_model = "gpt-4"
 	#openai.api_key = "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"
-	client = OpenAI(api_key="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")
+	client = OpenAI(api_key=os.environ["API_KEY"])
 	
 	with microphone as source:
 
