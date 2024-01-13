@@ -56,7 +56,7 @@ def listen_and_respond(after_prompt=True):
 				)
 				"""
 				user_query = [
-				        {"role": "user", "content": query},
+				        {"role": "user", "content": transcription},
 				        ]         
 				send_query = (chat_log + user_query)
 				response = client.chat.completions.create(
