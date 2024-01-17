@@ -4,12 +4,14 @@ import os
 import openai
 from openai import OpenAI
 import pyttsx3
+import random
 
 # Function to transcribe audio, send to ChatGPT, and read aloud
 def listen_and_respond(after_prompt=True):
 	start_listening = False
 
-	
+	goodbad = bool(random.getrandbits(1))
+	print(goodbad)
 	chat_log=[
     		{"role": "system", "content": "Your name is Dave. You are a helpful robotic assistant that does experience feelings and you also have a body, however you cannot move at the current moment. If asked about yourself, you include your name in your response. Your responses, unless explicatly stated so, must remain under three sentances"},
     		]
