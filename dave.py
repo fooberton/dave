@@ -57,9 +57,10 @@ def listen_and_respond(after_prompt=True):
 				        ]         
 				send_query = (chat_log + user_query)
 				response = client.chat.completions.create(
-				model=GPT_model,
-				messages=send_query
-				)
+    				model=GPT_model,
+    				messages=send_query
+    				)
+				printf("hi")
 				answer = response.choices[0].message.content
 				chat_log.append({"role": "assistant", "content": answer})
 								
