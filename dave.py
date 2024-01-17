@@ -65,7 +65,7 @@ def listen_and_respond(after_prompt=True):
 				chat_log.append({"role": "assistant", "content": answer})
 								
 				# Get the response text from the ChatGPT3 API
-				answer = response.choices[0].text
+				#answer = response.choices[0].text
 
 				# Print the response from the ChatGPT3 API
 				print(f"Response text: {answer}")
