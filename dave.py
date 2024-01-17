@@ -60,7 +60,7 @@ def listen_and_respond(after_prompt=True):
     				model=GPT_model,
     				messages=send_query
     				)
-				printf("hi")
+				print("hi")
 				answer = response.choices[0].message.content
 				chat_log.append({"role": "assistant", "content": answer})
 								
