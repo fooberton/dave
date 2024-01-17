@@ -11,7 +11,7 @@ def listen_and_respond(after_prompt=True):
 
 	
 	chat_log=[
-    		{"role": "system", "content": "Your name is Dave. You are a helpful assistant. If asked about yourself, you include your name in your response."},
+    		{"role": "system", "content": "Your name is Dave. You are a helpful robotic assistant with a body, however you cannot move at the current moment. If asked about yourself, you include your name in your response. Your responses, unless explicatly stated so, must remain under three sentances"},
     		]
 	GPT_model = "gpt-4"
 	#openai.api_key = "MY_AI_KEY"
@@ -41,17 +41,6 @@ def listen_and_respond(after_prompt=True):
 				transcription = recognizer.recognize_google(audio)
 				print(f"Input text: {transcription}")
 					
-				# Send the transcribed text to the ChatGPT3 API
-				"""
-				response = openai.Completion.create(
-				engine="text-davinci-003",
-				prompt=transcription,
-				temperature=0.9,
-				max_tokens=512,
-				top_p=1,
-				presence_penalty=0.6
-				)
-				"""
 				user_query = [
 				        {"role": "user", "content": transcription},
 				        ]         
